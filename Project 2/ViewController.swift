@@ -11,13 +11,14 @@ class ViewController: UIViewController {
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
-
+    @IBOutlet var rightBarButton: UIBarButtonItem!
+    
     var countries = [String]()
     var correctAnswer = 0
     var score = 0
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         button1.layer.borderWidth = 1
         button2.layer.borderWidth = 1
@@ -39,7 +40,7 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
 
         correctAnswer = Int.random(in: 0...2)
-        title = "\(countries[correctAnswer].uppercased())"+"     Score: \(score)"
+        title = "\(countries[correctAnswer].uppercased())"
     }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
@@ -57,6 +58,8 @@ class ViewController: UIViewController {
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         present(ac, animated: true)
     
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score: \(score)", style: .plain, target: self, action: nil)
+        
     }
 }
 

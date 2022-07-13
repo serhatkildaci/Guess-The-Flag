@@ -60,11 +60,14 @@
                             <constraint firstItem="8Mz-Io-ZoD" firstAttribute="centerX" secondItem="Xqo-m9-qZi" secondAttribute="centerX" id="qxr-pw-qPw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RJb-Tb-1SX"/>
+                    <navigationItem key="navigationItem" id="RJb-Tb-1SX">
+                        <barButtonItem key="rightBarButtonItem" tag="4" title="Score: 0" id="nvY-c0-XJN"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="button1" destination="8Mz-Io-ZoD" id="VCY-1j-yLX"/>
                         <outlet property="button2" destination="Xqo-m9-qZi" id="lrX-PD-MGN"/>
                         <outlet property="button3" destination="hD8-Pc-Ggs" id="TQd-sw-hLP"/>
+                        <outlet property="rightBarButton" destination="nvY-c0-XJN" id="IWa-nE-XqV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
